@@ -10,9 +10,7 @@ const Album = ({ album }) => {
       <CoverImage imageUrls={images} />
       <AlbumName name={name} />
       <div className="artist-names">
-        {artists.map((artist) => (
-          <ArtistName key={artist.id} artist={artist} />
-       ) )}
+        <ArtistName artists={artists} />
       </div>
     </div>
   );
