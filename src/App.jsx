@@ -1,10 +1,10 @@
 import data from "./data.json";
-import Album from "./Components/Album components/Album.jsx";
+import Album from "./Components/Album.jsx";
 import {Header} from "./Components/Header.jsx";
 
 
 const App = () => {
-  const albums = data.albums.items; // Correct the variable name here
+  const albums = data.albums.items;
 
   return (
     <div className="App">

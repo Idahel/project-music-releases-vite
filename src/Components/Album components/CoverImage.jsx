@@ -1,17 +1,22 @@
 const CoverImage = ({ imageUrls }) => {
-  return (
-    <div className="album-cover">
-      {imageUrls.map((image, index) => (
+  // Check if imageUrls is an array and contains at least one image
+  if (Array.isArray(imageUrls) && imageUrls.length > 0) {
+    const firstImage = imageUrls[0]; // Get the first image
+
+    return (
+      <div className="album-cover">
         <img
-          key={index}
-          src={image.url}
-          alt={`Album Cover ${index + 1}`}
-          width={image.width}
-          height={image.height}
+          src={firstImage.url}
+          alt={`Album Cover`}
+          width={firstImage.width}
+          height={firstImage.height}
         />
-      ))}
-    </div>
-  );
+      </div>
+    );
+  }
+
+  // Return null or a placeholder image if there are no images to display
+  return null;
 };
 
 export default CoverImage;

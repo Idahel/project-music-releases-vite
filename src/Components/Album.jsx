@@ -1,6 +1,6 @@
-import CoverImage from "./CoverImage";
-import AlbumName from "./AlbumName";
-import ArtistName from "./ArtistName";
+import CoverImage from "./Album components/CoverImage";
+import AlbumName from "./Album components/AlbumName";
+import ArtistName from "./Album components/ArtistName";
 
 const Album = ({ album }) => {
   const { name, images, artists } = album;
