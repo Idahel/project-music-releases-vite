@@ -1,15 +1,19 @@
 import data from "./data.json";
+import Album from "./Components/Album components/Album.jsx";
 import {Header} from "./Components/Header.jsx";
-import {Album} from "./Components/Album components/Album.jsx";
 
-export const App = () => {
-  const { items } = data.albums;
+
+const App = () => {
+  const albums = data.albums.items; // Correct the variable name here
+
   return (
     <div className="App">
       <Header />
-      {items.map((album, id) => (
-        <Album key={id} album={album} />
+      {albums.map((album, index) => (
+        <Album key={index} album={album} />
       ))}
     </div>
   );
-}
+};
+
+export default App;

@@ -1,7 +1,5 @@
-export const AlbumName = ({ albumName }) => {
-    return (
-      <div>
-        <h2>{albumName}</h2>
-      </div>
-    );
-  };
+const AlbumName = ({ name }) => {
+  return <h3>{name}</h3>;
+};
+
+export default AlbumName;

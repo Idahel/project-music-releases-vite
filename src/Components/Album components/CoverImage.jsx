@@ -1,6 +1,4 @@
-
-
-export const CoverImage = ({ imageUrls }) => {
+const CoverImage = ({ imageUrls }) => {
   return (
     <div className="album-cover">
       {imageUrls.map((image, index) => (
@@ -15,3 +13,5 @@ export const CoverImage = ({ imageUrls }) => {
     </div>
   );
 };
+
+export default CoverImage;
