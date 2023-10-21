@@ -71,3 +71,8 @@ img {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+.album-cover img:hover {
+  opacity: 0.7;
+  transition: opacity 0.2s;
+
+}
