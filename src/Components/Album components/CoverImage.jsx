@@ -8,8 +8,6 @@ const CoverImage = ({ imageUrls }) => {
         <img
           src={firstImage.url}
           alt={`Album Cover`}
-          width={firstImage.width}
-          height={firstImage.height}
         />
       </div>
     );

@@ -1,18 +1,23 @@
 import CoverImage from "./Album components/CoverImage";
 import AlbumName from "./Album components/AlbumName";
 import ArtistName from "./Album components/ArtistName";
+import data from "/src/data.json";
 
-const Album = ({ album }) => {
-  const { name, images, artists } = album;
+const Album = () => {
+  const albums = data.albums.items; 
 
   return (
-    <div className="album">
-      <CoverImage imageUrls={images} />
-      <AlbumName name={name} />
-      <div className="artist-names">
-        <ArtistName artists={artists} />
-      </div>
-    </div>
+    <section className="album-list">
+      {albums.map((album, index) => (
+        <div className="album" key={index}>
+          <CoverImage imageUrls={album.images} />
+          <AlbumName name={album.name} />
+          <div className="artist-names">
+            <ArtistName artists={album.artists} />
+          </div>
+        </div>
+      ))}
+    </section>
   );
 };
 
