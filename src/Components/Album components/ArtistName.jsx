@@ -1,10 +1,13 @@
-const ArtistName = ({ artist }) => {
-  const { name, external_urls } = artist;
+const ArtistName = ({ artists }) => {
+  const artistNames = artists.map((artist) => artist.name);
+  const artistNamesString = artistNames.join(", ");
 
   return (
-    <a href={external_urls.spotify} target="_blank" rel="noopener noreferrer">
-      {name}
+    <div className="artist-name"> 
+    <a href={artists[0].external_urls.spotify} target="_blank" rel="noopener noreferrer">
+      {artistNamesString}
     </a>
+    </div>
   );
 };
 
