@@ -1,19 +1,20 @@
+import { Buttons } from "./Buttons";
+
 const CoverImage = ({ imageUrls }) => {
-  // Check if imageUrls is an array and contains at least one image
-  if (Array.isArray(imageUrls) && imageUrls.length > 0) {
-    const firstImage = imageUrls[0]; // Get the first image
+  if (Array.isArray (imageUrls) && imageUrls.length > 0) {
+    const firstImage = imageUrls[0];
 
     return (
-      <div className="album-cover">
+      <div className = "album-cover">
         <img
-          src={firstImage.url}
-          alt={`Album Cover`}
+          src = {firstImage.url}
+          alt = {`Album Cover`}
         />
+        <Buttons />
       </div>
     );
   }
 
-  // Return null or a placeholder image if there are no images to display
   return null;
 };
 
