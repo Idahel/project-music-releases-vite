@@ -1,6 +1,6 @@
 export const Header = () => {
     const headerText = "New Albums & Singles";
-    const headerUnderText = "By Ester & Ida"
+    const headerUnderText = "By Ida"
     
     return (
         <header> 
